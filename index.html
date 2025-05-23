@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Farewell Teacher</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Farewell, Surojit Sir </h1>
+    <p class="subtitle">Thank you for guiding us with wisdom and care</p>
+    <img src="Surojit.png.png" alt="Surojit Sir" Style="height: 12.5rem ; width:12.5rem;"/>
+
+       <button id="farewellBtn" align="Center">
+            <svg class="mailbox-svg" viewBox="0 0 100 70">
+                <rect x="10" y="20" width="80" height="40" rx="5" ry="5"/>
+                <path d="M10 25 L30 10 L80 10 L90 25 Z"/>
+                <rect x="45" y="60" width="10" height="10" fill="#8B4513"/>
+            </svg>
+            <svg class="mailbox-heart" viewBox="0 0 24 24">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+        </button>
+
+    <div id="messageCard" class="card hidden">
+      <h2>Thank You, Sir!</h2>
+      <p>
+        A teacher's influence never ends,<br />
+        It reaches far beyond classroom trends.<br />
+        You've planted seeds of wisdom and care,<br />
+        Nurturing minds with patience rare.
+      </p>
+      <p>
+        Like this tree that blooms with flowers bright,<br />
+        Your guidance has given us wings for flight.<br />
+        As you journey on to new endeavors,<br />
+        Our gratitude and love will last forever.
+      </p>
+      <p class="highlight">
+        Wishing you joy and success in all your future endeavors!
+      </p>
+        <p class="highlight">
+         <i>   With love, From Sagnik</i> </p>
+         <p class="highlight">
+         <i>   Miss you Sir </i> </p>
+
+         <div class="tree-container">
+      <img id="tree" src="tree.png.jpeg" alt="Tree"  style="height:8.125rem ; width: 8.125rem;"/>
+    </div>
+    <div class="ami-container">
+      <img id="ami" src="ami.jpg" alt="Sagnik with Sir" style="height:10.125rem ; width: 6.125rem;"/>
+    </div>
+</div>
+   <audio id="backgroundSong" loop>
+            <source src="song.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <button id="audioControlBtn">🎵</button>
+     
+  
+ 
+
+  <script>
+    document.getElementById("farewellBtn").addEventListener("click", function () {
+      document.getElementById("messageCard").classList.remove("hidden");
+      const tree = document.getElementById("tree");
+      tree.classList.remove("hidden");
+      tree.classList.add("grow");
+      
+    });
+     const audioControlBtn = document.getElementById("audioControlBtn");
+            const backgroundSong = document.getElementById("backgroundSong");
+            audioControlBtn.addEventListener('click', function() {
+                if (backgroundSong.paused) {
+                    backgroundSong.play();
+                    audioControlBtn.textContent = '▶️';
+                } else {
+                    backgroundSong.pause();
+                    audioControlBtn.textContent = '⏸️';
+                }
+            });
+  </script>
+</body>
+</html>

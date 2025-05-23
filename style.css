@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: "Merriweather", serif;
+  background: linear-gradient(to bottom right, #87CEEB, #ADD8E6); /* Sky Blue to Light Blue gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #191970; /* Midnight Blue */
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #6A6A6A; /* Dark Gray for readability */
+  margin-bottom: 30px;
+}
+
+
+        /* Button styles */
+        #farewellBtn {
+            padding: 0; /* Remove default padding to control inner SVG size */
+            width: 100px; /* Fixed width for mailbox */
+            height: 70px; /* Fixed height for mailbox */
+            background-color: #4682B4; /* Steel Blue */
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: background-color 0.3s ease;
+             display: block; /* Changed to block to allow margin: auto for centering */
+            margin: 0 auto; /* Center the button horizontally */
+            justify-content: center; /* Still useful for internal SVG centering */
+            align-items: center; /* Still useful for internal SVG centering */
+            position: relative; /* For positioning internal elements */
+            overflow: hidden; /* Hide parts of SVG that go outside */
+        }
+        #farewellBtn:hover {
+            background-color: #5F9EA0; /* Cadet Blue */
+        }
+       /* Mailbox SVG styles */
+        .mailbox-svg {
+            width: 80%; /* Make SVG fit inside the button */
+            height: 80%;
+            fill: white; /* Color of the mailbox body */
+            position: relative;
+            z-index: 1; /* Ensure mailbox is behind heart initially if needed */
+        }
+
+        .mailbox-heart {
+            fill: #FF69B4; /* Hot Pink for the heart */
+            width: 30px; /* Size of the heart */
+            height: 30px;
+            position: absolute; /* Position over the mailbox */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center the heart */
+            z-index: 2; /* Ensure heart is on top */
+        }
+
+.card {
+  background-color: #ffffff; /* Alice Blue with transparency */
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 650px;
+  margin-top: 40px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.card h2 {
+  color: #191970; /* Midnight Blue */
+  margin-bottom: 20px;
+}
+
+.card p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333333; 
+}
+
+.highlight {
+  color: #00BFFF; 
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+   /* Styles for the audio control button */
+        #audioControlBtn {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: white;
+            background-color: #5F9EA0; /* Cadet Blue */
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+            margin-top: 20px; /* Space from the button/card above */
+        }
+
+        #audioControlBtn:hover {
+            background-color: #4682B4; /* Steel Blue */
+        }
